@@ -1,0 +1,181 @@
+package Tema3.rfef;
+import java.util.Random;
+public class LigaWeikang extends Object{
+	private EquipoFutbolWeikang equipo1;
+	private EquipoFutbolWeikang equipo2;
+	private EquipoFutbolWeikang equipo3;
+	private EquipoFutbolWeikang equipo4;
+	
+	
+	public LigaWeikang(EquipoFutbolWeikang equipo1, EquipoFutbolWeikang equipo2, EquipoFutbolWeikang equipo3,
+			EquipoFutbolWeikang equipo4) {
+		this.equipo1 = equipo1;
+		this.equipo2 = equipo2;
+		this.equipo3 = equipo3;
+		this.equipo4 = equipo4;
+	}
+
+	public EquipoFutbolWeikang getEquipo1() {
+		return equipo1;
+	}
+	public void setEquipo1(EquipoFutbolWeikang equipo1) {
+		this.equipo1 = equipo1;
+	}
+	public EquipoFutbolWeikang getEquipo2() {
+		return equipo2;
+	}
+	public void setEquipo2(EquipoFutbolWeikang equipo2) {
+		this.equipo2 = equipo2;
+	}
+	public EquipoFutbolWeikang getEquipo3() {
+		return equipo3;
+	}
+	public void setEquipo3(EquipoFutbolWeikang equipo3) {
+		this.equipo3 = equipo3;
+	}
+	public EquipoFutbolWeikang getEquipo4() {
+		return equipo4;
+	}
+	public void setEquipo4(EquipoFutbolWeikang equipo4) {
+		this.equipo4 = equipo4;
+	}
+	public void simularPartido (EquipoFutbolWeikang equipoLocal, EquipoFutbolWeikang equipoVisitante) {
+			Random miRandom = new Random();
+			
+			int golesEquipoLocal = miRandom.nextInt (7) ; //goles aleatorios entre 0 y 7 sin incluir 7
+			equipoVisitante.getPortero().sumarGolesRecibidos(golesEquipoLocal); //asignar al portero rival los goles metidos
+			if (golesEquipoLocal > 0) { //solo entrar en el bucle si ha metido goles
+			 for (int i=0; golesEquipoLocal>i; i++) {  //repartir los goles metidos entre los tres delanteros
+				int goleadorAleatorio=miRandom.nextInt(3); //escoger aleatoriamente el goleador
+				switch (goleadorAleatorio){
+				case 0: equipoLocal.getDelanteroCen().sumarGolesAnotados(1); break;
+				case 1: equipoLocal.getDelanteroDer().sumarGolesAnotados(1); break;
+				case 2: equipoLocal.getDelanteroIzq().sumarGolesAnotados(1); break;
+			    }
+			 }
+		     int numAsistencia = miRandom.nextInt(golesEquipoLocal); //los asistencia de goles va de 0 hasta numero de goles como máximo
+		     for (int j=0; numAsistencia>j; j++){     
+		    	int asistenteAleatorio=miRandom.nextInt(3); //escoger aleatoriamente el asistente
+				switch (asistenteAleatorio){
+				case 0: equipoLocal.getCentrocampista1().sumarNumAsistencia(1);; break;
+				case 1: equipoLocal.getCentrocampista2().sumarNumAsistencia(1); break;
+				case 2: equipoLocal.getCentrocampista3().sumarNumAsistencia(1); break;
+			    }  
+			 }
+		     int NumPenaltisCometidos = miRandom.nextInt(golesEquipoLocal); //los penaltis cometidos va de 0 hasta numero de goles como máximo
+		     for (int k=0; NumPenaltisCometidos>k; k++){     
+		    	int defensaVisitanteAleatorio=miRandom.nextInt(4); //escoger aleatoriamente el cometidor de la falta del equipo visitante
+				switch (defensaVisitanteAleatorio){
+				case 0: equipoVisitante.getDefensaCen1().sumarPenaltisCometidos(1); break;
+				case 1: equipoVisitante.getDefensaCen2().sumarPenaltisCometidos(1); break;
+				case 2: equipoVisitante.getDefensaDer().sumarPenaltisCometidos(1); break;
+				case 3: equipoVisitante.getDefensaIzq().sumarPenaltisCometidos(1); break;
+			    }  
+			 }
+			}
+		    
+		   int golesEquipoVisitante = miRandom.nextInt (7); //Ahora es repetir todo lo mismo pero cambiando el equipo
+		   equipoLocal.getPortero().sumarGolesRecibidos(golesEquipoVisitante); 
+		   if (golesEquipoVisitante > 0) {
+		    for (int i = 0; golesEquipoVisitante > i; i++) { 
+			   int goleadorAleatorio2 = miRandom.nextInt(3); 
+			   switch (goleadorAleatorio2) {
+		        case 0: equipoVisitante.getDelanteroCen().sumarGolesAnotados(1); break;
+		        case 1: equipoVisitante.getDelanteroDer().sumarGolesAnotados(1); break;
+		        case 2: equipoVisitante.getDelanteroIzq().sumarGolesAnotados(1); break;
+		        }
+			 }
+		     int numAsistencia2 = miRandom.nextInt(golesEquipoVisitante); 
+		     for (int j = 0; numAsistencia2 > j; j++) {
+			   int asistenteAleatorio2 = miRandom.nextInt(3); 
+			   switch (asistenteAleatorio2) {
+		        case 0: equipoVisitante.getCentrocampista1().sumarNumAsistencia(1); break;
+		        case 1: equipoVisitante.getCentrocampista2().sumarNumAsistencia(1); break;
+		        case 2: equipoVisitante.getCentrocampista3().sumarNumAsistencia(1); break;
+		        }  
+		     }
+		     int NumPenaltisCometidos2 = miRandom.nextInt(golesEquipoVisitante); 
+		     for (int k = 0; NumPenaltisCometidos2 > k; k++) {     
+		       int defensaLocalAleatorio = miRandom.nextInt(4); 
+		       switch (defensaLocalAleatorio) {
+		        case 0: equipoLocal.getDefensaCen1().sumarPenaltisCometidos(1); break;
+		        case 1: equipoLocal.getDefensaCen2().sumarPenaltisCometidos(1); break;
+		        case 2: equipoLocal.getDefensaDer().sumarPenaltisCometidos(1); break;
+		        case 3: equipoLocal.getDefensaIzq().sumarPenaltisCometidos(1); break;
+		        }  
+		      }
+		   }
+			if (golesEquipoLocal>golesEquipoVisitante){
+				equipoLocal.sumarPuntos(3);
+			}
+			else if (golesEquipoLocal<golesEquipoVisitante){
+				equipoVisitante.sumarPuntos(3);
+			}
+			else if (golesEquipoLocal==golesEquipoVisitante) {
+				equipoLocal.sumarPuntos(1);
+				equipoVisitante.sumarPuntos(1);
+			}
+			System.out.println(equipoLocal.getNombre()+" "+golesEquipoLocal+" - "+equipoVisitante.getNombre()+" "+golesEquipoVisitante);	
+	}
+	
+	public void listarPuntos() {
+	    EquipoFutbolWeikang[] equipos = { equipo1, equipo2, equipo3, equipo4 };
+
+	    for (int i = 0; i < equipos.length - 1; i++) {
+	        for (int j = 0; j < equipos.length - 1 - i; j++) {
+	            if (equipos[j].getPuntos() < equipos[j + 1].getPuntos()) {
+	            	EquipoFutbolWeikang temp = equipos[j];
+	                equipos[j] = equipos[j + 1];
+	                equipos[j + 1] = temp;
+	            }
+	        }
+	    }
+
+	    for (EquipoFutbolWeikang e : equipos) {
+	        System.out.println(e.getNombre() + ": " + e.getPuntos());
+	    }
+	}
+	
+	public void getPichichi(){
+        DelanteroWeikang[] delanteros = {
+            equipo1.getDelanteroCen(),
+            equipo1.getDelanteroDer(),
+            equipo1.getDelanteroIzq(),
+            equipo2.getDelanteroCen(),
+            equipo2.getDelanteroDer(),
+            equipo2.getDelanteroIzq(),
+            equipo3.getDelanteroCen(),
+            equipo3.getDelanteroDer(),
+            equipo3.getDelanteroIzq(),
+            equipo4.getDelanteroCen(),
+            equipo4.getDelanteroDer(),
+            equipo4.getDelanteroIzq()
+        };
+        DelanteroWeikang Pichichi = delanteros[0];
+        for (int i = 1; i < delanteros.length; i++) {
+            if (delanteros[i].getGolesAnotados() > Pichichi.getGolesAnotados()) {
+                Pichichi = delanteros[i];
+            }
+        }
+        System.out.println("El mayor goleador es: " +
+                Pichichi.getNombre() + " con " +
+                Pichichi.getGolesAnotados() + " goles, de equipo: "+Pichichi.getEquipo());
+    }
+	
+	public void getZamora(){
+		PorteroWeikang[] porteros = {
+				equipo1.getPortero(),
+				equipo2.getPortero(),
+				equipo3.getPortero(),
+				equipo4.getPortero()
+		};
+		PorteroWeikang Zamora = porteros[0];
+		for (int i = 1; i < porteros.length; i++) {
+			if (porteros[i].getGolesRecibidos() < Zamora.getGolesRecibidos())
+				Zamora = porteros[i];
+		}
+		 System.out.println("El mejor portero es: " +
+	                Zamora.getNombre() + " con " +
+	               Zamora.getGolesRecibidos() + " goles recibidos, de equipo: "+Zamora.getEquipo());
+	}
+ }
