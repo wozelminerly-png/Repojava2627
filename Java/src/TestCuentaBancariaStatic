@@ -1,13 +1,1 @@
-package Tema3;
 
-public class E4CuentaBancariaStaticTest {
-
-	public static void main(String[] args) {
-		
-		E4CuentaBancariaStatic banco1 = new E4CuentaBancariaStatic ("Weikang", 1000);
-		banco1.retirar(100);
-        System.out.println(banco1.toString());
-        System.out.println("Número de cuentas creadas: "+E4CuentaBancariaStatic.getNumeroCuentas());
-        System.out.print("Entidad bancaria: "+banco1.getEntidadBancaria());
-    }
-}
