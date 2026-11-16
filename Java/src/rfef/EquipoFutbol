@@ -1,0 +1,27 @@
+package Tema3.rfef;
+import java.time.LocalDate;
+public class EquipoFutbolTestWeikang extends Object{
+	public static void main(String[] args) {
+		
+		CentrocampistaWeikang centrocampista1 = new CentrocampistaWeikang("Alexei Petrov", (byte)29, 11);
+		CentrocampistaWeikang centrocampista2 = new CentrocampistaWeikang("Maxi Gómez", (byte)24, 7);
+		CentrocampistaWeikang centrocampista3 = new CentrocampistaWeikang("David Silva", (byte)32, 19);
+		DefensaWeikang defensaIzq = new DefensaWeikang("Álex Martín", (byte)20, 1);
+		DefensaWeikang defensaDer = new DefensaWeikang("Leo Morales", (byte)35, 0);
+		DefensaWeikang defensaCen1 = new DefensaWeikang("Jordi Roca", (byte)28, 3);
+		DefensaWeikang defensaCen2 = new DefensaWeikang("Luca Toni", (byte)31, 2);
+		DelanteroWeikang delanteroIzq = new DelanteroWeikang("Ángel García", (byte)18, 15,"Atlético Weikang");
+		DelanteroWeikang delanteroDer = new DelanteroWeikang("Dani Sosa", (byte)25, 35,"Atlético Weikang");
+		DelanteroWeikang delanteroCen = new DelanteroWeikang("Marco Polo", (byte)30, 42, "Atlético Weikang");
+		PorteroWeikang portero = new PorteroWeikang("Héctor 'Muro'", (byte)34, 25, "Atlético Weikang");
+		EntrenadorWeikang entrenador = new EntrenadorWeikang("Juan Pérez", (byte)55, (byte)15, (byte)12);
+		
+		EquipoFutbolWeikang ClubFutbolWeikang = new EquipoFutbolWeikang("Atlético Weikang", "Ciudad Nueva", "Estadio de la Tecnología", 
+				 LocalDate.of(2010, 5, 15), centrocampista1, centrocampista2, centrocampista3, defensaIzq, defensaDer, defensaCen1, defensaCen2,
+		    delanteroIzq, delanteroDer, delanteroCen, portero, entrenador, 54
+		);
+		
+		System.out.println(ClubFutbolWeikang.toString());
+
+ }
+}
