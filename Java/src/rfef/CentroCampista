@@ -1,0 +1,47 @@
+package Tema3.rfef;
+
+public class CentrocampistaWeikang extends Object{
+	private String nombre;
+	private byte edad;
+	private int numAsistencia;
+	
+	public CentrocampistaWeikang (String paraNombre, byte paraEdad, int paraNumAsistencia) {
+		this.nombre=paraNombre;
+		this.edad=paraEdad;
+		this.numAsistencia=paraNumAsistencia;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public byte getEdad() {
+		return edad;
+	}
+
+	public void setEdad(byte edad) {
+		this.edad = edad;
+	}
+
+	public int getNumAsistencia() {
+		return numAsistencia;
+	}
+
+	public void setNumAsistencia(int numAsistencia) {
+		this.numAsistencia = numAsistencia;
+	}
+	
+    public void sumarNumAsistencia(int numAsistencia) {
+    	this.numAsistencia+=numAsistencia;
+    }
+	@Override
+	public String toString() {
+		return "CentrocampistaWeikang [nombre=" + nombre + ", edad=" + edad + ", numAsistencia=" + numAsistencia + "]";
+	}
+	
+	
+}
