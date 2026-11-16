@@ -1,0 +1,197 @@
+package Tema3.rfef;
+import java.time.LocalDate;
+public class EquipoFutbolWeikang extends Object{
+	private String nombre;
+	private String ciudad;
+	private String nombreCampo;
+	private LocalDate fechaFundacion;
+	private CentrocampistaWeikang centrocampista1;
+	private CentrocampistaWeikang centrocampista2;
+	private CentrocampistaWeikang centrocampista3;
+	private DefensaWeikang defensaIzq;
+	private DefensaWeikang defensaDer;
+	private DefensaWeikang defensaCen1;
+	private DefensaWeikang defensaCen2;
+	private DelanteroWeikang delanteroIzq;
+	private DelanteroWeikang delanteroDer;
+	private DelanteroWeikang delanteroCen;
+	private PorteroWeikang portero;
+	private EntrenadorWeikang entrenador;
+	private int puntos;
+	
+	public EquipoFutbolWeikang(String nombre, String ciudad, String nombreCampo, LocalDate fechaFundacion,
+			CentrocampistaWeikang centrocampista1, CentrocampistaWeikang centrocampista2,
+			CentrocampistaWeikang centrocampista3, DefensaWeikang defensaIzq, DefensaWeikang defensaDer,
+			DefensaWeikang defensaCen1, DefensaWeikang defensaCen2,DelanteroWeikang delanteroIzq, DelanteroWeikang delanteroDer,
+			DelanteroWeikang delanteroCen, PorteroWeikang portero, EntrenadorWeikang entrenador, int puntos) {
+		this.nombre = nombre;
+		this.ciudad = ciudad;
+		this.nombreCampo = nombreCampo;
+		this.fechaFundacion = fechaFundacion;
+		this.centrocampista1 = centrocampista1;
+		this.centrocampista2 = centrocampista2;
+		this.centrocampista3 = centrocampista3;
+		this.defensaIzq = defensaIzq;
+		this.defensaDer = defensaDer;
+		this.defensaCen1 = defensaCen1;
+		this.defensaCen2 = defensaCen2;
+		this.delanteroIzq = delanteroIzq;
+		this.delanteroDer = delanteroDer;
+		this.delanteroCen = delanteroCen;
+		this.portero = portero;
+		this.entrenador = entrenador;
+		this.puntos=puntos;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getCiudad() {
+		return ciudad;
+	}
+
+	public void setCiudad(String ciudad) {
+		this.ciudad = ciudad;
+	}
+
+	public String getNombreCampo() {
+		return nombreCampo;
+	}
+
+	public void setNombreCampo(String nombreCampo) {
+		this.nombreCampo = nombreCampo;
+	}
+
+	public LocalDate getFechaFundacion() {
+		return fechaFundacion;
+	}
+
+	public void setFechaFundacion(LocalDate fechaFundacion) {
+		this.fechaFundacion = fechaFundacion;
+	}
+
+	public CentrocampistaWeikang getCentrocampista1() {
+		return centrocampista1;
+	}
+
+	public void setCentrocampista1(CentrocampistaWeikang centrocampista1) {
+		this.centrocampista1 = centrocampista1;
+	}
+
+	public CentrocampistaWeikang getCentrocampista2() {
+		return centrocampista2;
+	}
+
+	public void setCentrocampista2(CentrocampistaWeikang centrocampista2) {
+		this.centrocampista2 = centrocampista2;
+	}
+
+	public CentrocampistaWeikang getCentrocampista3() {
+		return centrocampista3;
+	}
+
+	public void setCentrocampista3(CentrocampistaWeikang centrocampista3) {
+		this.centrocampista3 = centrocampista3;
+	}
+
+	public DefensaWeikang getDefensaIzq() {
+		return defensaIzq;
+	}
+
+	public void setDefensaIzq(DefensaWeikang defensaIzq) {
+		this.defensaIzq = defensaIzq;
+	}
+
+	public DefensaWeikang getDefensaDer() {
+		return defensaDer;
+	}
+
+	public void setDefensaDer(DefensaWeikang defensaDer) {
+		this.defensaDer = defensaDer;
+	}
+
+	public DefensaWeikang getDefensaCen1() {
+		return defensaCen1;
+	}
+
+	public void setDefensaCen1(DefensaWeikang defensaCen1) {
+		this.defensaCen1 = defensaCen1;
+	}
+
+	public DefensaWeikang getDefensaCen2() {
+		return defensaCen2;
+	}
+
+	public void setDefensaCen2(DefensaWeikang defensaCen2) {
+		this.defensaCen2 = defensaCen2;
+	}
+
+	public DelanteroWeikang getDelanteroIzq() {
+		return delanteroIzq;
+	}
+
+	public void setDelanteroIzq(DelanteroWeikang delanteroIzq) {
+		this.delanteroIzq = delanteroIzq;
+	}
+
+	public DelanteroWeikang getDelanteroDer() {
+		return delanteroDer;
+	}
+
+	public void setDelanteroDer(DelanteroWeikang delanteroDer) {
+		this.delanteroDer = delanteroDer;
+	}
+
+	public DelanteroWeikang getDelanteroCen() {
+		return delanteroCen;
+	}
+
+	public void setDelanteroCen(DelanteroWeikang delanteroCen) {
+		this.delanteroCen = delanteroCen;
+	}
+
+	public PorteroWeikang getPortero() {
+		return portero;
+	}
+
+	public void setPortero(PorteroWeikang portero) {
+		this.portero = portero;
+	}
+
+	public EntrenadorWeikang getEntrenador() {
+		return entrenador;
+	}
+	
+	public void setEntrenador(EntrenadorWeikang entrenador) {
+		this.entrenador = entrenador;
+	}
+	
+	public int getPuntos() {
+		return puntos;
+	}
+
+	public void setPuntos(int puntos) {
+		this.puntos = puntos;
+	}
+	
+	public void sumarPuntos(int puntos) {
+         this.puntos+=puntos;
+	}
+
+	@Override
+	public String toString() {
+		return "EquipoFutbolWeikang [nombre=" + nombre + ", ciudad=" + ciudad + ", nombreCampo=" + nombreCampo
+				+ ", fechaFundacion=" + fechaFundacion +"\n"+ "centrocampista1=" +centrocampista1 +"\n"+ "centrocampista2="
+				+centrocampista2 +"\n"+ "centrocampista3=" +centrocampista3 +"\n"+ "defensaIzq=" +defensaIzq
+				+"\n"+ "defensaDer="+ defensaDer +"\n"+ "defensaCen1=" + defensaCen1 +"\n"+ "defensaCen2=" + defensaCen2
+				+"\n"+"delanteroIzq=" + delanteroIzq + "\n"+"delanteroDer=" + delanteroDer +"\n"+"delanteroCen=" + delanteroCen
+				+"\n"+"portero=" + portero + "\n"+"entrenador=" + entrenador + "]"+"\n"+"puntos="+puntos;
+	}
+
+	
+}
