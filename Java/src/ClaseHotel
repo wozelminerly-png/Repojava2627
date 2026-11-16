@@ -1,0 +1,54 @@
+package Tema3;
+
+public class ClaseHotel {
+     private String direccion;
+     private String ciudad;
+     private int num_plazes;
+     private String nombre;
+     private String codigo;
+	 public ClaseHotel(String direccion, String ciudad, int num_plazes, String nombre, String codigo) {
+		super();
+		this.direccion = direccion;
+		this.ciudad = ciudad;
+		this.num_plazes = num_plazes;
+		this.nombre = nombre;
+		this.codigo = codigo;
+	 }
+	 public String getDireccion() {
+		 return direccion;
+	 }
+	 public void setDireccion(String direccion) {
+		 this.direccion = direccion;
+	 }
+	 public String getCiudad() {
+		 return ciudad;
+	 }
+	 public void setCiudad(String ciudad) {
+		 this.ciudad = ciudad;
+	 }
+	 public int getNum_plazes() {
+		 return num_plazes;
+	 }
+	 public void setNum_plazes(int num_plazes) {
+		 this.num_plazes = num_plazes;
+	 }
+	 public String getNombre() {
+		 return nombre;
+	 }
+	 public void setNombre(String nombre) {
+		 this.nombre = nombre;
+	 }
+	 public String getCodigo() {
+		 return codigo;
+	 }
+	 public void setCodigo(String codigo) {
+		 this.codigo = codigo;
+	 }
+	 @Override
+	 public String toString() {
+		return "ClaseHotel [direccion=" + direccion + ", ciudad=" + ciudad + ", num_plazes=" + num_plazes + ", nombre="
+				+ nombre + ", codigo=" + codigo + "]";
+	 }
+	 
+     
+}
