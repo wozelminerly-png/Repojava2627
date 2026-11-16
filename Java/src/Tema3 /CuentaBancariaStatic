@@ -1,0 +1,83 @@
+package Tema3;
+/**
+ * Clase CuentaBancariaStatic que crea cuentas bancarias con atributo estático
+ * @author Weikang
+ * @since 31-oct-2025
+ */
+public class E4CuentaBancariaStatic extends Object {
+	/**titular de la cuenta*/
+	private String titular;
+	/**saldo de la cuenta*/
+	private double saldo;
+	//crea un atributo estático para contar el número de cuentas
+	/**atributo estático para el número de cuentas*/
+	private static int numeroCuenta=0;
+	private final String entidadBancaria="BBVA";
+	
+	/**
+	 * Constructor de la clase. Incrementa el número de cuentas
+	 * @param titular String
+	 * @param saldoInicial double
+	 */
+	
+	//constructor para inicializar la cuenta
+	public E4CuentaBancariaStatic (String titular, double saldoInicial) {
+		this.titular = titular;
+		this.saldo = saldoInicial;
+		this.numeroCuenta++;
+	}
+	
+	
+	//Método para ingresar dinero
+	/**
+	 * Método para ingresar dinero
+	 * @param cantidad double
+	 */
+	public void ingresar(double cantidad) {
+		if (cantidad > 0) {
+			saldo+=cantidad;
+			System.out.println("Se ha ingresado"+cantidad+"€. Saldo actual: "+saldo+"€");
+		}else {
+			System.out.println("La cantidad a ingresar debe ser positiva.");
+		}
+	}
+	/**
+	 * Método para retirar dinero
+	 * @param cantidad double
+	 */
+	public void retirar(double cantidad) {	
+		if (cantidad > 0 && cantidad <=saldo) {
+			saldo-=cantidad;
+			System.out.println("Se ha retirado "+cantidad+"€. Saldo actual: "+saldo+"€");
+		}else {
+			System.out.println("Fondos insuficientes o cantidad inválida.");
+		}
+	}
+	/**
+	 * Método para consultar el saldo
+	 * @return double
+	 */
+	public double consultarSaldo() {	
+		return this.saldo;
+	}
+	/**
+	 * Método para obtener el titular de la cuenta
+	 * @return String
+	 */
+	public String getTitular() {
+		return titular;
+	}
+	public static int getNumeroCuentas() {
+	    return numeroCuenta;
+	}
+	public final String getEntidadBancaria() {
+		return entidadBancaria;
+	}
+
+	public String toString() {
+		return "E4CuentaBancariaStatic [titular=" + titular + ", saldo=" + saldo + "]";
+	}
+	
+	
+	
+}
