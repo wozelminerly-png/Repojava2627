@@ -1,0 +1,100 @@
+package Tema3.rfef;
+import java.time.LocalDate;
+public class LigaTestWeikang {
+
+	public static void main(String[] args) {
+		//Equipo 1
+		CentrocampistaWeikang centro1A = new CentrocampistaWeikang("Héctor Mora", (byte)21, 0);
+		CentrocampistaWeikang centro2A = new CentrocampistaWeikang("Francisco Ruiz", (byte)34, 0);
+		CentrocampistaWeikang centro3A = new CentrocampistaWeikang("Enrique Paz", (byte)27, 0);
+		DefensaWeikang defIzqA = new DefensaWeikang("Pedro Acosta", (byte)18, 0);
+		DefensaWeikang defDerA = new DefensaWeikang("Ignacio Bravo", (byte)25, 0);
+		DefensaWeikang defCen1A = new DefensaWeikang("Marcos León", (byte)30, 0);
+		DefensaWeikang defCen2A = new DefensaWeikang("Esteban Oliva", (byte)33, 0);
+		DelanteroWeikang delIzqA = new DelanteroWeikang("Óscar Medina", (byte)24, 0, "Fútbol Club Trébol");
+		DelanteroWeikang delDerA = new DelanteroWeikang("Sebastián Vera", (byte)28, 0, "Fútbol Club Trébol");
+		DelanteroWeikang delCenA = new DelanteroWeikang("Andrés Rojas", (byte)26, 0, "Fútbol Club Trébol");
+		PorteroWeikang porteroA = new PorteroWeikang("Daniel Muralla", (byte)32, 0, "Fútbol Club Trébol");
+		EntrenadorWeikang entrenadorA = new EntrenadorWeikang("Raúl Medina", (byte)49, (byte)13, (byte)11);
+
+		EquipoFutbolWeikang ClubFutbolTrebol = new EquipoFutbolWeikang(
+		    "Fútbol Club Trébol", "Zaragoza", "Estadio del Jardín", LocalDate.of(2014, 2, 28),
+		    centro1A, centro2A, centro3A, defIzqA, defDerA, defCen1A, defCen2A,
+		    delIzqA, delDerA, delCenA, porteroA, entrenadorA, 0
+		);		
+		// Equipo 2 
+		CentrocampistaWeikang centro1B = new CentrocampistaWeikang("Sergio Alarcón", (byte)27, 0);
+		CentrocampistaWeikang centro2B = new CentrocampistaWeikang("Matías López", (byte)22, 0);
+		CentrocampistaWeikang centro3B = new CentrocampistaWeikang("Jorge Domínguez", (byte)30, 0);
+		DefensaWeikang defIzqB = new DefensaWeikang("Raúl Cabrera", (byte)25, 0);
+		DefensaWeikang defDerB = new DefensaWeikang("Tomás Rico", (byte)33, 0);
+		DefensaWeikang defCen1B = new DefensaWeikang("Gabriel Soto", (byte)29, 0);
+		DefensaWeikang defCen2B = new DefensaWeikang("Hugo Santamaría", (byte)31, 0);
+		DelanteroWeikang delIzqB = new DelanteroWeikang("Pablo Ortega", (byte)23, 0, "Real Solaris");
+		DelanteroWeikang delDerB = new DelanteroWeikang("Iván Ledesma", (byte)26, 0, "Real Solaris");
+		DelanteroWeikang delCenB = new DelanteroWeikang("Kevin Valdés", (byte)28, 0, "Real Solaris");
+		PorteroWeikang porteroB = new PorteroWeikang("Francisco Gómez", (byte)35, 0, "Real Solaris");
+		EntrenadorWeikang entrenadorB = new EntrenadorWeikang("Roberto Quintana", (byte)52, (byte)10, (byte)14);
+
+		EquipoFutbolWeikang ClubFutbolSolaris = new EquipoFutbolWeikang(
+		    "Real Solaris", "Valencia", "Estadio del Sol", LocalDate.of(2002, 9, 12),
+		    centro1B, centro2B, centro3B, defIzqB, defDerB, defCen1B, defCen2B,
+		    delIzqB, delDerB, delCenB, porteroB, entrenadorB, 0
+		);
+		// Equipo 3
+		CentrocampistaWeikang centro1C = new CentrocampistaWeikang("Luis Téllez", (byte)25, 0);
+		CentrocampistaWeikang centro2C = new CentrocampistaWeikang("Carlos Núñez", (byte)31, 0);
+		CentrocampistaWeikang centro3C = new CentrocampistaWeikang("Alberto Ramos", (byte)28, 0);
+		DefensaWeikang defIzqC = new DefensaWeikang("Mario Crespo", (byte)19, 0);
+		DefensaWeikang defDerC = new DefensaWeikang("Andrés Varela", (byte)24, 0);
+		DefensaWeikang defCen1C = new DefensaWeikang("Samuel Prieto", (byte)29, 0);
+		DefensaWeikang defCen2C = new DefensaWeikang("Cristian Peña", (byte)33, 0);
+		DelanteroWeikang delIzqC = new DelanteroWeikang("Antonio Vidal", (byte)20, 0, "Club Deportivo Boreal");
+		DelanteroWeikang delDerC = new DelanteroWeikang("Julián Rivera", (byte)27, 0, "Club Deportivo Boreal");
+		DelanteroWeikang delCenC = new DelanteroWeikang("Rubén Blanco", (byte)30, 0, "Club Deportivo Boreal");
+		PorteroWeikang porteroC = new PorteroWeikang("Esteban Norte", (byte)34, 0, "Club Deportivo Boreal");
+		EntrenadorWeikang entrenadorC = new EntrenadorWeikang("Miguel Castillo", (byte)50, (byte)12, (byte)13);
+
+		EquipoFutbolWeikang ClubFutbolBoreal = new EquipoFutbolWeikang(
+		    "Club Deportivo Boreal", "Santander", "Campo Ártico", LocalDate.of(1985, 03, 17),
+		    centro1C, centro2C, centro3C, defIzqC, defDerC, defCen1C, defCen2C,
+		    delIzqC, delDerC, delCenC, porteroC, entrenadorC, 0
+		);
+		// Equipo 4
+		CentrocampistaWeikang centro1D = new CentrocampistaWeikang("Eduardo Herrera", (byte)24, 0);
+		CentrocampistaWeikang centro2D = new CentrocampistaWeikang("Germán Torres", (byte)26, 0);
+		CentrocampistaWeikang centro3D = new CentrocampistaWeikang("Víctor Ibáñez", (byte)32, 0);
+		DefensaWeikang defIzqD = new DefensaWeikang("David Romero", (byte)28, 0);
+		DefensaWeikang defDerD = new DefensaWeikang("Manuel Ortega", (byte)22, 0);
+		DefensaWeikang defCen1D = new DefensaWeikang("Nicolás Rubio", (byte)30, 0);
+		DefensaWeikang defCen2D = new DefensaWeikang("Santiago Gálvez", (byte)34, 0);
+		DelanteroWeikang delIzqD = new DelanteroWeikang("Adrián Cuesta", (byte)25, 0, "Unión del Eterum");
+		DelanteroWeikang delDerD = new DelanteroWeikang("Cristóbal Gil", (byte)20, 0, "Unión del Eterum");
+		DelanteroWeikang delCenD = new DelanteroWeikang("José Gallardo", (byte)29, 0, "Unión del Eterum");
+		PorteroWeikang porteroD = new PorteroWeikang("Ricardo Rayo", (byte)31, 0, "Unión del Eterum");
+		EntrenadorWeikang entrenadorD = new EntrenadorWeikang("Fernando Navarro", (byte)53, (byte)11, (byte)15);
+
+		EquipoFutbolWeikang ClubFutbolEterum = new EquipoFutbolWeikang(
+		    "Unión del Eterum", "Sevilla", "Estadio Luz del Amanecer", LocalDate.of(1998, 11, 3),
+		    centro1D, centro2D, centro3D, defIzqD, defDerD, defCen1D, defCen2D,
+		    delIzqD, delDerD, delCenD, porteroD, entrenadorD, 0
+		);
+		
+		LigaWeikang liga2526 = new LigaWeikang (ClubFutbolTrebol, ClubFutbolSolaris, ClubFutbolBoreal, ClubFutbolEterum);
+		System.out.print("------Empiza la liga 25/26------\n");
+		liga2526.simularPartido(ClubFutbolTrebol,ClubFutbolSolaris);
+		liga2526.simularPartido(ClubFutbolTrebol,ClubFutbolBoreal);
+	    liga2526.simularPartido(ClubFutbolTrebol,ClubFutbolEterum);
+		liga2526.simularPartido(ClubFutbolBoreal,ClubFutbolSolaris);
+		liga2526.simularPartido(ClubFutbolBoreal,ClubFutbolEterum);
+		liga2526.simularPartido(ClubFutbolEterum,ClubFutbolSolaris);
+		System.out.print("\n---Puntuación final de los equipos---\n");
+		liga2526.listarPuntos();
+		System.out.print("\n---Pichichi y Zamora---\n");
+		liga2526.getPichichi();
+		liga2526.getZamora();
+		
+		System.out.println("\n"+ClubFutbolTrebol.getCentrocampista1().getNombre()+" con asistencia de "+ClubFutbolTrebol.getCentrocampista1().getNumAsistencia());
+		System.out.print(ClubFutbolTrebol.getDefensaCen1().getNombre()+" con penaltis cometidos de "+ClubFutbolTrebol.getDefensaCen1().getPenaltisCometidos());
+ }
+}
