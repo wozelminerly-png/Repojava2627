@@ -1,0 +1,45 @@
+package Tema3.rfef;
+
+public class DefensaWeikang extends Object{
+	private String nombre;
+	private byte edad;
+	private int penaltisCometidos;
+	
+	public DefensaWeikang (String paraNombre, byte paraEdad, int paraPenaltisCometidos) {
+		this.nombre=paraNombre;
+		this.edad=paraEdad;
+		this.penaltisCometidos=paraPenaltisCometidos;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public byte getEdad() {
+		return edad;
+	}
+
+	public void setEdad(byte edad) {
+		this.edad = edad;
+	}
+
+	public int getPenaltisCometidos() {
+		return penaltisCometidos;
+	}
+
+	public void setPenaltisCometidos(int penaltisCometidos) {
+		this.penaltisCometidos = penaltisCometidos;
+	}
+    public void sumarPenaltisCometidos(int penaltisCometidos) {
+    	this.penaltisCometidos += penaltisCometidos;
+    }
+	@Override
+	public String toString() {
+		return "DefensaWeikang [nombre=" + nombre + ", edad=" + edad + ", penaltisCometidos=" + penaltisCometidos + "]";
+	}
+
+}
