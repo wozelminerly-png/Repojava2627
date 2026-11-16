@@ -1,0 +1,55 @@
+package Tema3.rfef;
+
+public class EntrenadorWeikang extends Object{
+	private String nombre;
+	private byte edad;
+	private byte añosExperiencia;
+	private byte titulos;
+	
+	public EntrenadorWeikang (String paraNombre, byte paraEdad, byte paraAñosExperiencia, byte paraTitulos) {
+		this.nombre=paraNombre;
+		this.edad=paraEdad;
+		this.añosExperiencia= paraAñosExperiencia;
+		this.titulos = paraTitulos;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public byte getEdad() {
+		return edad;
+	}
+
+	public void setEdad(byte edad) {
+		this.edad = edad;
+	}
+
+	public byte getAñosExperiencia() {
+		return añosExperiencia;
+	}
+
+	public void setAñosExperiencia(byte añosExperiencia) {
+		this.añosExperiencia = añosExperiencia;
+	}
+
+	public byte getTitulos() {
+		return titulos;
+	}
+
+	public void setTitulos(byte titulos) {
+		this.titulos = titulos;
+	}
+
+	@Override
+	public String toString() {
+		return "EntrenadorWeikang [nombre=" + nombre + ", edad=" + edad + ", añosExperiencia=" + añosExperiencia
+				+ ", titulos=" + titulos + "]";
+	}
+	
+
+}
