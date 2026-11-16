@@ -1,0 +1,61 @@
+package Tema3.rfef;
+
+public class PorteroWeikang extends Object{
+	private String nombre;
+	private byte edad;
+	private int golesRecibidos;
+	private String equipo;
+	
+	public PorteroWeikang (String paraNombre, byte paraEdad, int paraGolesRecibidos, String equipo) {
+		this.nombre=paraNombre;
+		this.edad=paraEdad;
+		this.golesRecibidos=paraGolesRecibidos;
+		this.equipo=equipo;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public byte getEdad() {
+		return edad;
+	}
+
+	public void setEdad(byte edad) {
+		this.edad = edad;
+	}
+
+	public int getGolesRecibidos() {
+		return golesRecibidos;
+	}
+
+	public void setGolesRecibidos(int golesRecibidos) {
+		this.golesRecibidos = golesRecibidos;
+	}
+	
+	public String getEquipo() {
+		return equipo;
+	}
+
+	public void setEquipo(String equipo) {
+		this.equipo = equipo;
+	}
+
+	public void sumarGolesRecibidos(int golesRecibidos) {
+		this.golesRecibidos+=golesRecibidos;
+	}
+
+	@Override
+	public String toString() {
+		return "PorteroWeikang [nombre=" + nombre + ", edad=" + edad + ", golesRecibidos=" + golesRecibidos
+				+ ", equipo=" + equipo + "]";
+	}
+
+	
+	
+
+}
