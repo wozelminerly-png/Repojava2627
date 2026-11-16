@@ -1,0 +1,42 @@
+package Tema3;
+public class PersonaWeikang {
+	private String nombre;
+	private byte edad;
+	private double estatura;
+  
+	public PersonaWeikang (String paraNombre, byte paraEdad, double paraEstatura) {
+		this.nombre=paraNombre;
+		this.edad=paraEdad;
+		this.estatura=paraEstatura;
+	}
+	public void crecer(double incremento) {
+		estatura += incremento;
+	}
+	public void cumplirAnyos() {
+		edad++;
+	}
+	public byte getEdad() {
+		return edad;
+	}
+	public double getEstatura() {
+		return estatura;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void saludar() {
+		System.out.print("Hola. Mi nombre es "+nombre);
+	}
+	public void setEdad(byte edad) {
+		this.edad=edad;
+	}
+	public void setEstatura(double estatura) {
+		this.estatura=estatura;
+	}
+	public void setNombre(String nombre) {
+		this.nombre=nombre;
+	}
+	public String toString() {
+		return "Datos del alumno = Persona [nombre=" + nombre + ", edad=" + edad + ", estatura=" + estatura + "]";
+	}
+}
