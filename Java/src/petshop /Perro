@@ -1,0 +1,21 @@
+package petshopWeikang;
+
+public class PerroHu {
+	private String nombre;
+	private int edad;
+	private String raza;
+	
+	public PerroHu(String nombre, int edad, String raza) {
+		super();
+		this.nombre = nombre;
+		this.edad = edad;
+		this.raza = raza;
+	}
+	public String hacerRuido() {
+		return("Guau~!");
+	}
+	@Override
+	public String toString() {
+		return "PerroHu [nombre=" + nombre + ", edad=" + edad + ", raza=" + raza + "]";
+	}
+}
