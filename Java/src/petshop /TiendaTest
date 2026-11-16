@@ -1,0 +1,19 @@
+package petshopWeikang;
+
+public class TiendaWeikangTest {
+
+	public static void main(String[] args) {
+		PerroHu perro1 = new PerroHu("Odi",5,"chiwawa");
+		System.out.println("Perro creado con datos: "+perro1.toString()+"\n"+perro1.hacerRuido());
+		
+		ClienteWeikang cliente1 = new ClienteWeikang("Leo","Avenida de San Juan");
+		cliente1.comprarPerro(perro1);
+		System.out.println("Cliente creado y perro asignado: "+"\n"+cliente1.toString());
+		
+		TiendaHu tienda1  = new TiendaHu("MascotaShop","Calle de Barojas");
+		tienda1.agregarCliente(cliente1);
+		System.out.println("Esta es mi tienda de animales: "+"\n"+tienda1.toString());
+	
+	}
+
+}
