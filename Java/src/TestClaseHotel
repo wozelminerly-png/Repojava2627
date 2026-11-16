@@ -1,0 +1,8 @@
+package Tema3;
+
+public class ClaseHotelTest {
+    public static void main(String[] args) {
+    	ClaseHotel hotelLorena = new ClaseHotel ("Calle","Madrid",5,"Pio","879");
+    	System.out.println(hotelLorena.toString());
+    } 
+}
