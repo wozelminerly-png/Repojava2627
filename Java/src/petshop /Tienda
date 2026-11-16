@@ -1,0 +1,20 @@
+package petshopWeikang;
+
+public class TiendaHu {
+	private String nombre;
+	private String direccion;
+	private ClienteWeikang cliente ;
+	public TiendaHu(String nombre, String direccion) {
+		super();
+		this.nombre = nombre;
+		this.direccion = direccion;
+	}
+	public void agregarCliente(ClienteWeikang cliente) {
+		this.cliente = cliente;
+	}
+	@Override
+	public String toString() {
+		return "TiendaHu [nombre=" + nombre + ", direccion=" + direccion +", cliente="+"\n" + cliente + "]";
+	}
+
+}
