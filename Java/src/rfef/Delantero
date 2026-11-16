@@ -1,0 +1,62 @@
+package Tema3.rfef;
+
+public class DelanteroWeikang extends Object{
+	private String nombre;
+	private byte edad;
+	private int golesAnotados;
+	private String equipo;
+
+
+	public DelanteroWeikang (String paraNombre, byte paraEdad, int paraGolesAnotados, String equipo) {
+		this.nombre=paraNombre;
+		this.edad=paraEdad;
+		this.golesAnotados=paraGolesAnotados;
+		this.equipo=equipo;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public byte getEdad() {
+		return edad;
+	}
+
+	public void setEdad(byte edad) {
+		this.edad = edad;
+	}
+
+	public int getGolesAnotados() {
+		return golesAnotados;
+	}
+
+	public void setGolesAnotados(int golesAnotados) {
+		this.golesAnotados = golesAnotados;
+	}
+	
+	public String getEquipo() {
+		return equipo;
+	}
+
+	public void setEquipo(String equipo) {
+		this.equipo = equipo;
+	}
+	
+	public void sumarGolesAnotados(int golesAnotados) {
+		this.golesAnotados+=golesAnotados;
+	}
+
+	@Override
+	public String toString() {
+		return "DelanteroWeikang [nombre=" + nombre + ", edad=" + edad + ", golesAnotados=" + golesAnotados
+				+ ", equipo=" + equipo + "]";
+	}
+
+	
+	
+
+}
